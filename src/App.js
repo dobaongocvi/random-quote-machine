@@ -60,7 +60,10 @@ class App extends Component {
   return (
     <Grid display = "flex" id = "quote-box" alignItems = "center" justifyContent ="center" minHeight= "100vh" container>
       <Grid xs = {11} lg = {8} item>
-      <QuoteMachine selectedQuote = {this.selectedQuote} assignNewQuoteIndex = {this.assignNewQuoteIndex} />
+
+          <QuoteMachine selectedQuote = {this.selectedQuote} assignNewQuoteIndex = {this.assignNewQuoteIndex} />
+
+      
       </Grid>
     </Grid>
     );

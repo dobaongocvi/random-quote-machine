@@ -9,22 +9,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 
-const QuoteMachine = ({ assignNewQuoteIndex, selectedQuote}) => (
+const QuoteMachine = (props) => (
     <Card>
         <CardContent>
-        {selectedQuote ? 
+        {props.selectedQuote ? 
             (
         <Typography id = "text">
-            {selectedQuote.quote} - <span id ="author"> {selectedQuote.author}</span>
+            {props.selectedQuote.quote} - <span id ="author"> {props.selectedQuote.author}</span>
         </Typography>
             ) : null }
         </CardContent>
         <CardActions>
-        <Button id = "new-quote" size = "small" onClick={assignNewQuoteIndex}>Next Quote</Button>
+        <Button id = "new-quote" size = "small" onClick={props.assignNewQuoteIndex}>Next Quote</Button>
         <IconButton
-        href = {encodeURI(`https://twitter.com/intent/tweet?text=${selectedQuote.quote}`)} id = "tweet-quote"
+         id = "tweet-quote"
         >
-            <FontAwesomeIcon icon = {faTwitter} size = "md"></FontAwesomeIcon>
+            <FontAwesomeIcon icon = {faTwitter} size = "1x"></FontAwesomeIcon>
         </IconButton>
         </CardActions>
     </Card>
